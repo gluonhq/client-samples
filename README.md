@@ -4,7 +4,9 @@ Java and JavaFX samples to run with OpenJDK 11, GraalVM and the Gluon Client plu
 
 Set `JAVA_HOME` pointing to Java 11.
 
-**Note**: For now, only Mac OS X is supported.
+**Note**: For now, only Mac OS X is supported. Therefore, a Mac with MacOS X 10.13.2 or superior, and Xcode 9.2 or superior, available from the Mac App Store, are required.
+
+Check the [documentation](https://docs.gluonhq.com/client) for more details about the plugins and running the following samples.
 
 ## Gradle
 
