@@ -21,3 +21,20 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+*.iml
+Gradle/HelloFX/.gradle
+Gradle/HelloFX/.idea
+Gradle/HelloFX/build
+Gradle/HelloFXML/.gradle
+Gradle/HelloFXML/.idea
+Gradle/HelloFXML/build
+Gradle/HelloWorld/.gradle
+Gradle/HelloWorld/.idea
+Gradle/HelloWorld/build
+Maven/HelloFX/.idea
+Maven/HelloFX/target
+Maven/helloFXML/.idea
+Maven/helloFXML/target
+Maven/helloWorld/.idea
+Maven/helloWorld/target
