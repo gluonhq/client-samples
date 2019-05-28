@@ -1,0 +1,13 @@
+plugins {
+    id 'application'
+    id 'com.gluonhq.client-gradle-plugin' version '0.0.1'
+}
+
+repositories {
+    mavenCentral()
+}
+
+gluonClient {
+}
+
+mainClassName = 'hello.HelloWorld'
