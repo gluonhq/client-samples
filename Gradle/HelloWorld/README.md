@@ -1,7 +1,7 @@
-# Gluon Client HelloWorld
+# Gluon Client HelloWorld using Gradle
 
 This is the most basic sample for running Java and JavaFX samples on a client that run with OpenJDK 11, GraalVM and the Gluon 
-Client plugins for [Maven](https://github.com/gluonhq/client-maven-plugin/) and [Gradle](https://github.com/gluonhq/client-gradle-plugin/).
+Client plugin for [Gradle](https://github.com/gluonhq/client-gradle-plugin/).
 
 Set `JAVA_HOME` pointing to Java 11.
 
@@ -9,9 +9,7 @@ Set `JAVA_HOME` pointing to Java 11.
 
 Check the [documentation](https://docs.gluonhq.com/client) for more details about the plugins and running the following samples.
 
-## Gradle
-
-### Run on Mac OS X
+## Run on Mac OS X
 
 To compile and link:
 
@@ -29,7 +27,7 @@ To run the generated executable:
     
     ./gradlew nativeRun
 
-### Run on iOS
+## Run on iOS
 
 The only required change is providing the optional `target` property in the `gluonClient` configuration inside the `build.gradle` file:
 ```
@@ -42,25 +40,8 @@ Apart from this, connect an iOS device and perform the steps described above:
     ./gradlew clean nativeBuild
     ./gradlew nativeRun
 
-** Note ** 
-This is an app without a UI. For an app showing a UI, have a look at the HelloFX sample. When running the HelloWorld application, the `Hello, World` is printed on `System.err` which is shown at the console where you initiated `./gradlew nativeRun`
+** Note **: This is an app without a UI. For an app showing a UI, have a look at the HelloFX sample. When running the HelloWorld application, the `Hello, World` is printed on `System.err` which is shown at the console where you initiated `./gradlew nativeRun`
 
-** Note **
-Since all java bytecode is translated to native code, the compilation step can take a long time, and it requires a fair amount
+** Note **: Since all java bytecode is translated to native code, the compilation step can take a long time, and it requires a fair amount
 of memory.
 
-## Maven
-
-### HelloWorld
-
-To compile and link:
-
-    mvn clean client:compile client:link
-    
-or
-
-    mvn clean client:build
-
-To run:
-
-    mvn client:run
