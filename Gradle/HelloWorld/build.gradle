@@ -1,6 +1,6 @@
 plugins {
     id 'application'
-    id 'com.gluonhq.client-gradle-plugin' version '0.0.1'
+    id 'com.gluonhq.client-gradle-plugin' version '0.0.9'
 }
 
 repositories {
@@ -8,6 +8,7 @@ repositories {
 }
 
 gluonClient {
+    // target = "ios" // uncomment this to run on iOS device
 }
 
 mainClassName = 'hello.HelloWorld'
