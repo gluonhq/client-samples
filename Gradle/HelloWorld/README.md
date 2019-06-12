@@ -21,6 +21,7 @@ This task performs 3 steps:
 * it will link the native code with dependencies and required VM code into an executable (done by the subtask `nativeLink`)
 
 Alternatively, if you prefer to do those steps one by one, you can run
+
     ./gradlew clean build nativeCompile nativeLink
 
 To run the generated executable:
@@ -29,7 +30,10 @@ To run the generated executable:
 
 ## Run on iOS
 
-The only required change is providing the optional `target` property in the `gluonClient` configuration inside the `build.gradle` file:
+Before you can use the plugin for deploying to iOS devices, you need to have `llvm` in your path. You can download llvm for 
+mac <a href="http://releases.llvm.org/6.0.0/clang+llvm-6.0.0-x86_64-apple-darwin.tar.xz">here</a>.
+
+The only required change in the 'build.gradle' is providing the optional `target` property in the `gluonClient` configuration inside the `build.gradle` file:
 ```
 gluonClient {
     target = "ios"
@@ -42,6 +46,7 @@ Apart from this, connect an iOS device and perform the steps described above:
 
 ** Note **: This is an app without a UI. For an app showing a UI, have a look at the HelloFX sample. When running the HelloWorld application, the `Hello, World` is printed on `System.err` which is shown at the console where you initiated `./gradlew nativeRun`
 
-** Note **: Since all java bytecode is translated to native code, the compilation step can take a long time, and it requires a fair amount
-of memory.
+** Note **: Since all java bytecode is translated to native code, the compilation step can take a long time, and it requires a fair amount of memory.
+
+** Note **: In order to deploy apps to an iOS device, you need a valid iOS provisioning profile.
 
