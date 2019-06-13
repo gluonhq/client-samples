@@ -1,7 +1,7 @@
 # Gluon Client HelloFX using Maven
 
-This is the most basic sample for running JavaFX on a client with OpenJDK 11, GraalVM and the Gluon 
-[Client plugin for Maven](https://github.com/gluonhq/client-maven-plugin/).
+This is the most basic sample for running JavaFX on a client with OpenJDK 11, GraalVM and the 
+[Gluon Client plugin](https://github.com/gluonhq/client-maven-plugin/) for Maven.
 
 We recommend you first start with the [HelloWorld sample](https://github.com/gluonhq/client-samples/tree/master/Maven/HelloWorld) in this repository, if you haven't done it already.
 

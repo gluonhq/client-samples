@@ -1,7 +1,7 @@
 # Gluon Client HelloWorld using Gradle
 
-This is the most basic sample for running Java and JavaFX samples on a client that run with OpenJDK 11, GraalVM and the Gluon 
-[Client plugin for Gradle](https://github.com/gluonhq/client-gradle-plugin/).
+This is the most basic sample for running Java and JavaFX samples on a client that run with OpenJDK 11, GraalVM and the 
+[Gluon Client plugin](https://github.com/gluonhq/client-gradle-plugin/)  for Gradle.
 
 Check the [documentation](https://docs.gluonhq.com/client) for more details about the plugin.
 
