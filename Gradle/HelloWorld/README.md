@@ -44,6 +44,14 @@ Apart from this, connect an iOS device and perform the steps described above:
     ./gradlew clean nativeBuild
     ./gradlew nativeRun
 
+If you want to run on the iPhone Simulator, you can do so by setting the `target` property in the `gluonClient` configuration to `ios-sim`:
+```
+gluonClient {
+    target = "ios-sim"
+}
+```
+
+
 ** Note **: This is an app without a UI. For an app showing a UI, have a look at the HelloFX sample. When running the HelloWorld application, the `Hello, World` is printed on `System.err` which is shown at the console where you initiated `./gradlew nativeRun`
 
 ** Note **: Since all java bytecode is translated to native code, the compilation step can take a long time, and it requires a fair amount of memory.
