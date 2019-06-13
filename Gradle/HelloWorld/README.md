@@ -1,6 +1,6 @@
 # Gluon Client HelloWorld using Gradle
 
-This is the most basic sample for running Java and JavaFX samples on a client that run with OpenJDK 11, GraalVM and the 
+This is the most basic sample for running Java on a client that run with OpenJDK 11, GraalVM and the 
 [Gluon Client plugin](https://github.com/gluonhq/client-gradle-plugin/)  for Gradle.
 
 Check the [documentation](https://docs.gluonhq.com/client) for more details about the plugin.
@@ -17,9 +17,9 @@ To compile and link:
     
 This task performs 3 steps: 
 
-* it will compile the Java source code into Java bytecode (done by the subtask `build`)
-* it will compile the Java bytecode to native code (done by the subtask `nativeCompile`)
-* it will link the native code with dependencies and required VM code into an executable (done by the subtask `nativeLink`)
+* compile the Java source code into Java bytecode (done by the subtask `build`)
+* compile the Java bytecode to native code (done by the subtask `nativeCompile`)
+* link the native code with dependencies and required VM code into an executable (done by the subtask `nativeLink`)
 
 Alternatively, if you prefer to do those steps one by one, you can run
 
@@ -34,7 +34,7 @@ To run the generated executable:
 Before you can use the plugin for deploying to iOS devices, you need to have `llvm` in your path. You can download llvm for 
 mac <a href="http://releases.llvm.org/6.0.0/clang+llvm-6.0.0-x86_64-apple-darwin.tar.xz">here</a>.
 
-The only required change in the `build.gradle is providing the optional `target` property in the `gluonClient` configuration inside the `build.gradle` file:
+The only required change in the `build.gradle` is providing the optional `target` property in the `gluonClient` configuration inside the `build.gradle` file:
 
 ```
 gluonClient {

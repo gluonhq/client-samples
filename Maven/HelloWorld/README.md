@@ -1,6 +1,6 @@
 # Gluon Client HelloWorld using Maven
 
-This is the most basic sample for running Java and JavaFX samples on a client that run with OpenJDK 11, GraalVM and the 
+This is the most basic sample for running Java on a client that run with OpenJDK 11, GraalVM and the 
 [Gluon Client plugin](https://github.com/gluonhq/client-maven-plugin/) for Maven.
 
 Check the [documentation](https://docs.gluonhq.com/client) for more details about the plugin.
@@ -17,9 +17,9 @@ To compile and link:
     
 This task performs 3 steps: 
 
-* it will compile the Java source code into Java bytecode (done by the subtask `client:compile`)
-* it will compile the Java bytecode to native code (done by the subtask `client:compile`)
-* it will link the native code with dependencies and required VM code into an executable (done by the subtask `client:link`)
+* compile the Java source code into Java bytecode (done by the subtask `client:compile`)
+* compile the Java bytecode to native code (done by the subtask `client:compile`)
+* link the native code with dependencies and required VM code into an executable (done by the subtask `client:link`)
 
 Alternatively, if you prefer to do those steps one by one, you can run
 

@@ -20,9 +20,9 @@ To compile and link:
     
 This task performs 3 steps: 
 
-* it will compile the Java source code into Java bytecode (done by the subtask `client:compile`)
-* it will compile the Java bytecode to native code (done by the subtask `client:compile`)
-* it will link the native code with dependencies and required VM code into an executable (done by the subtask `client:link`)
+* compile the Java source code into Java bytecode (done by the subtask `client:compile`)
+* compile the Java bytecode to native code (done by the subtask `client:compile`)
+* link the native code with dependencies and required VM code into an executable (done by the subtask `client:link`)
 
 Alternatively, if you prefer to do those steps one by one, you can run
 
@@ -50,14 +50,13 @@ Additionally, you need to instruct the application that it will run on iOS. This
 future, but for now, modify the `main` method in `HelloFX` as follows
 
 ```
-    public static void main(String[] args) {
-        System.setProperty("os.target", "ios");
-        System.setProperty("os.name", "iOS");
-        System.setProperty("glass.platform", "ios");
-        System.setProperty("targetos.name", "iOS");
-        launch(args);
-    }
-
+public static void main(String[] args) {
+    System.setProperty("os.target", "ios");
+    System.setProperty("os.name", "iOS");
+    System.setProperty("glass.platform", "ios");
+    System.setProperty("targetos.name", "iOS");
+    launch(args);
+}
 ```
 
 Apart from this, connect an iOS device and perform the steps described above:
@@ -83,12 +82,11 @@ If you want to run on the iPhone Simulator, you can do so by setting the `target
 and modify the `main` method in `HelloFX` as follows
     
 ```
-    public static void main(String[] args) {
-        System.setProperty("os.target", "ios");
-        System.setProperty("os.name", "iOS");
-        System.setProperty("glass.platform", "ios");
-        System.setProperty("targetos.name", "iOS");
-        launch(args);
-    }
-
+public static void main(String[] args) {
+    System.setProperty("os.target", "ios");
+    System.setProperty("os.name", "iOS");
+    System.setProperty("glass.platform", "ios");
+    System.setProperty("targetos.name", "iOS");
+    launch(args);
+}
 ```
