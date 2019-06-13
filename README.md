@@ -4,13 +4,15 @@ Java and JavaFX samples to run with OpenJDK 11, GraalVM and the Gluon Client plu
 
 Set `JAVA_HOME` pointing to Java 11.
 
-**Note**: For now, only Mac OS X is supported. Therefore, a Mac with MacOS X 10.13.2 or superior, and Xcode 9.2 or superior, available from the Mac App Store, are required.
+**Note**: For now, only Mac OS X and iOS are supported. Therefore, a Mac with MacOS X 10.13.2 or superior, and Xcode 9.2 or superior, available from the Mac App Store, are required.
 
 Check the [documentation](https://docs.gluonhq.com/client) for more details about the plugins and running the following samples.
 
 ## Gradle
 
 ### HelloWorld, HelloFX, HelloFXML samples
+
+The following tasks apply to Mac OS X, iOS simulator and iOS devices. See each sample for configuration details.
 
 To compile and link:
 
@@ -27,6 +29,8 @@ To run:
 ## Maven
 
 ### HelloWorld, HelloFX, HelloFXML samples
+
+The following tasks apply to Mac OS X, iOS simulator and iOS devices. See each sample for configuration details.
 
 To compile and link:
 
