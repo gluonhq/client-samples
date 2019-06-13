@@ -1,7 +1,7 @@
 plugins {
     id 'application'
     id 'org.openjfx.javafxplugin' version '0.0.7'
-    id 'com.gluonhq.client-gradle-plugin' version '0.0.1'
+    id 'com.gluonhq.client-gradle-plugin' version '0.0.9'
 }
 
 repositories {
@@ -12,6 +12,8 @@ dependencies {
 }
 
 gluonClient {
+    // target = "ios" // uncomment to deploy on iOS
+
     bundlesList = ["hellofx.hello"]
     reflectionList = ["javafx.fxml.FXMLLoader", "hellofx.HelloController", 
               "javafx.scene.control.Button", "javafx.scene.control.Label"]

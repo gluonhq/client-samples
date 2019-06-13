@@ -1,9 +1,9 @@
-# Gluon Client HelloFX using Gradle
+# Gluon Client HelloFX using Maven
 
 This is the most basic sample for running JavaFX on a client with OpenJDK 11, GraalVM and the 
-[Gluon Client plugin](https://github.com/gluonhq/client-gradle-plugin/)  for Gradle.
+[Gluon Client plugin](https://github.com/gluonhq/client-maven-plugin/) for Maven.
 
-We recommend you first start with the [HelloWorld sample](https://github.com/gluonhq/client-samples/tree/master/Gradle/HelloWorld) in this repository, if you haven't done it already.
+We recommend you first start with the [HelloWorld sample](https://github.com/gluonhq/client-samples/tree/master/Maven/HelloWorld) in this repository, if you haven't done it already.
 
 Also, check the [documentation](https://docs.gluonhq.com/client) for more details about the plugin.
 
@@ -16,32 +16,34 @@ For all supported platforms, you need to set `JAVA_HOME` pointing to Java 11.
 
 To compile and link:
 
-    ./gradlew clean nativeBuild
+    mvn clean client:build
     
 This task performs 3 steps: 
 
-* compile the Java source code into Java bytecode (done by the subtask `build`)
-* compile the Java bytecode to native code (done by the subtask `nativeCompile`)
-* link the native code with dependencies and required VM code into an executable (done by the subtask `nativeLink`)
+* compile the Java source code into Java bytecode (done by the subtask `client:compile`)
+* compile the Java bytecode to native code (done by the subtask `client:compile`)
+* link the native code with dependencies and required VM code into an executable (done by the subtask `client:link`)
 
 Alternatively, if you prefer to do those steps one by one, you can run
 
-    ./gradlew clean build nativeCompile nativeLink
+    mvn clean compile client:compile client:link
 
 To run the generated executable:
     
-    ./gradlew nativeRun
+    mvn client:run
 
 ## Run on iOS
 
 Before you can use the plugin for deploying to iOS devices, you need to have `llvm` in your path. You can download llvm for 
 Mac OS X <a href="http://releases.llvm.org/6.0.0/clang+llvm-6.0.0-x86_64-apple-darwin.tar.xz">here</a>.
 
-The only required change in the `build.gradle` is providing the optional `target` property in the `gluonClient` configuration inside the `build.gradle` file:
+The only required change in the `pom.xml` is providing the optional `target` property in the configuration inside the plugin:
 ```
-gluonClient {
-    target = "ios"
-}
+<artifactId>client-maven-plugin</artifactId>
+<configuration>
+    <target>ios</target>
+    <mainClass>${mainClassName}</mainClass>
+</configuration>
 ```
 
 Additionally, you need to instruct the application that it will run on iOS. This will be taken care of by the build tools in the 
@@ -59,8 +61,8 @@ public static void main(String[] args) {
 
 Apart from this, connect an iOS device and perform the steps described above:
 
-    ./gradlew clean nativeBuild
-    ./gradlew nativeRun
+    mvn clean client:build
+    mvn client:run
 
 **Note**: Since all java bytecode is translated to native code, the compilation step can take a long time, and it requires a fair amount of memory.
 
@@ -68,11 +70,13 @@ Apart from this, connect an iOS device and perform the steps described above:
 
 ## Run on iOS simulator
 
-If you want to run on the iPhone Simulator, you can do so by setting the `target` property in the `gluonClient` configuration to `ios-sim`:
+If you want to run on the iPhone Simulator, you can do so by setting the `target` property in the plugin's configuration to `ios-sim`:
 ```
-gluonClient {
-    target = "ios-sim"
-}
+<artifactId>client-maven-plugin</artifactId>
+<configuration>
+    <target>ios-sim</target>
+    <mainClass>${mainClassName}</mainClass>
+</configuration>
 ```
 
 and modify the `main` method in `HelloFX` as follows

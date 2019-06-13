@@ -1,6 +1,6 @@
-# Gluon Client HelloFX using Gradle
+# Gluon Client HelloFXLM using Gradle
 
-This is the most basic sample for running JavaFX on a client with OpenJDK 11, GraalVM and the 
+This is the most basic sample for running JavaFX with FXML on a client with OpenJDK 11, GraalVM and the 
 [Gluon Client plugin](https://github.com/gluonhq/client-gradle-plugin/)  for Gradle.
 
 We recommend you first start with the [HelloWorld sample](https://github.com/gluonhq/client-samples/tree/master/Gradle/HelloWorld) in this repository, if you haven't done it already.
@@ -77,7 +77,7 @@ gluonClient {
 
 and modify the `main` method in `HelloFX` as follows
     
-```
+```    
 public static void main(String[] args) {
     System.setProperty("os.target", "ios");
     System.setProperty("os.name", "iOS");
