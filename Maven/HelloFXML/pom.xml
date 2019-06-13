@@ -52,9 +52,11 @@
 
             <plugin>
                 <groupId>com.gluonhq</groupId>
-                <artifactId>omega-maven-plugin</artifactId>
-                <version>0.0.1</version>
+                <artifactId>client-maven-plugin</artifactId>
+                <version>0.0.9</version>
                 <configuration>
+                    <!-- Uncomment to run on iOS: -->
+                    <!-- <target>ios</target>-->
                     <bundlesList>
                         <list>hellofx.hello</list>
                     </bundlesList>

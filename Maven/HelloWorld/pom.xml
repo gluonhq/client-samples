@@ -29,8 +29,10 @@
             <plugin>
                 <groupId>com.gluonhq</groupId>
                 <artifactId>client-maven-plugin</artifactId>
-                <version>0.0.1</version>
+                <version>0.0.9</version>
                 <configuration>
+                    <!-- Uncomment to run on iOS: -->
+                    <!-- <target>ios</target>-->
                     <mainClass>hello.HelloWorld</mainClass>
                 </configuration>
             </plugin>
