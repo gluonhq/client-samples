@@ -24,11 +24,11 @@ To compile and link:
 
     mvn clean client:build
     
-This task performs 3 steps: 
+This goal performs 3 steps: 
 
-* compile the Java source code into Java bytecode (done by the subtask `client:compile`)
-* compile the Java bytecode to native code (done by the subtask `client:compile`)
-* link the native code with dependencies and required VM code into an executable (done by the subtask `client:link`)
+* compile the Java source code into Java bytecode (done by the goal `compile`)
+* compile the Java bytecode to native code (done by the goal `client:compile`)
+* link the native code with dependencies and required VM code into an executable (done by the goal `client:link`)
 
 Alternatively, if you prefer to do those steps one by one, you can run
 
@@ -57,7 +57,7 @@ Apart from this, connect an iOS device and perform the steps described above:`
     mvn clean client:build
     mvn client:run
 
-**Note**: This is an app without a UI. For an app showing a UI, have a look at the HelloFX sample. When running the HelloWorld application, the `Hello, World` is printed on `System.err` which is shown at the console where you initiated `./gradlew nativeRun`
+**Note**: This is an app without a UI. For an app showing a UI, have a look at the HelloFX sample. When running the HelloWorld application, the `Hello, World` is printed on `System.err` which is shown at the console where you initiated `mvn client:run`.
 
 **Note**: Since all java bytecode is translated to native code, the compilation step can take a long time, and it requires a fair amount of memory.
 
