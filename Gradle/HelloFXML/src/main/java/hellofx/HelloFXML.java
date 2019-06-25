@@ -21,13 +21,6 @@ public class HelloFXML extends Application {
     }
 
     public static void main(String[] args) {
-/*
-// uncomment for iOS
-        System.setProperty("os.target", "ios");
-        System.setProperty("os.name", "iOS");
-        System.setProperty("glass.platform", "ios");
-        System.setProperty("targetos.name", "iOS");
-*/
         launch(args);
     }
 

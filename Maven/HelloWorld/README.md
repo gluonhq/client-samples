@@ -5,7 +5,9 @@ This is the most basic sample for running Java on a client that run with OpenJDK
 
 **Requirements**
 
-For now, only Mac OS X and iOS are supported. Therefore, a Mac with MacOS X 10.13.2 or superior, and Xcode 9.2 or superior, available from the Mac App Store, are required.
+For now, Linux, Mac OS X and iOS platforms are supported.
+ 
+To develop and deploy native applications on Mac or iOS platforms, a Mac with macOS X 10.13.2 or superior, and Xcode 9.2 or superior, available from the Mac App Store, are required.
 
 As well, for now only JDK 11 is supported. Any JDK 11 distribution that doesn't bundle JavaFX is valid, like:
 
@@ -18,11 +20,11 @@ Once downloaded and installed, don't forget to set `JAVA_HOME` pointing to that 
 
 Check the [documentation](https://docs.gluonhq.com/client) for more details about the plugins and running the following samples.
 
-## Run on Mac OS X
+## Run on Linux or Mac OS X
 
 To compile and link:
 
-    mvn clean client:build
+    mvn client:build
     
 This goal performs 3 steps: 
 
@@ -32,7 +34,7 @@ This goal performs 3 steps:
 
 Alternatively, if you prefer to do those steps one by one, you can run
 
-    mvn clean compile client:compile client:link
+    mvn compile client:compile client:link
 
 To run the generated executable:
     
@@ -52,16 +54,19 @@ The only required change in the `pom.xml` is providing the optional `target` pro
 </configuration>
 ```
 
-Apart from this, connect an iOS device and perform the steps described above:`
+Now, perform the same steps described above:
 
-    mvn clean client:build
+    mvn client:build
+    
+and connect an iOS device to deploy and launch:
+    
     mvn client:run
 
 **Note**: This is an app without a UI. For an app showing a UI, have a look at the HelloFX sample. When running the HelloWorld application, the `Hello, World` is printed on `System.err` which is shown at the console where you initiated `mvn client:run`.
 
 **Note**: Since all java bytecode is translated to native code, the compilation step can take a long time, and it requires a fair amount of memory.
 
-**Note**: In order to deploy apps to an iOS device, you need a valid iOS provisioning profile.
+**Note**: In order to deploy apps to an iOS device, you need a valid iOS provisioning profile, as explained in the [documentation](https://docs.gluonhq.com/client/#_ios_deployment).
 
 ## Run on iOS simulator
 
@@ -74,3 +79,7 @@ If you want to run on the iPhone Simulator, you can do so by setting the `target
     <mainClass>${mainClassName}</mainClass>
 </configuration>
 ```
+
+and run the steps:
+
+    mvn client:build client:run
