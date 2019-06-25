@@ -4,7 +4,9 @@ Java and JavaFX samples to run with OpenJDK 11, GraalVM and the Gluon Client plu
 
 **Requirements**
 
-For now, only Mac OS X and iOS are supported. Therefore, a Mac with MacOS X 10.13.2 or superior, and Xcode 9.2 or superior, available from the Mac App Store, are required.
+For now, Linux, Mac OS X and iOS platforms are supported.
+ 
+To develop and deploy native applications on Mac or iOS platforms, a Mac with macOS X 10.13.2 or superior, and Xcode 9.2 or superior, available from the Mac App Store, are required.
 
 As well, for now only JDK 11 is supported. Any JDK 11 distribution that doesn't bundle JavaFX is valid, like:
 
