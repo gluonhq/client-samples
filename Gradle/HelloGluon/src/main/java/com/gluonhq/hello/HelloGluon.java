@@ -53,7 +53,7 @@ public class HelloGluon extends MobileApplication {
 
         if (Platform.isDesktop()) {
             Dimension2D dimension2D = DisplayService.create()
-                    .map(display -> display.getDefaultDimensions())
+                    .map(DisplayService::getDefaultDimensions)
                     .orElse(new Dimension2D(640, 480));
             scene.getWindow().setWidth(dimension2D.getWidth());
             scene.getWindow().setHeight(dimension2D.getHeight());
