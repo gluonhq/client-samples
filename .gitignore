@@ -39,6 +39,11 @@ Gradle/HelloWorld/.idea
 Gradle/HelloWorld/build
 Gradle/HelloWorld/src/ios
 Gradle/HelloWorld/src/mac
+Gradle/HelloGluon/.gradle
+Gradle/HelloGluon/.idea
+Gradle/HelloGluon/build
+Gradle/HelloGluon/src/ios
+Gradle/HelloGluon/src/mac
 Maven/HelloFX/.idea
 Maven/HelloFX/target
 Maven/HelloFX/src/ios
@@ -51,3 +56,7 @@ Maven/helloWorld/.idea
 Maven/helloWorld/target
 Maven/HelloWorld/src/ios
 Maven/HelloWorld/src/mac
+Maven/HelloGluon/.idea
+Maven/HelloGluon/target
+Maven/HelloGluon/src/ios
+Maven/HelloGluon/src/mac
