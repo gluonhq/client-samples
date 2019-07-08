@@ -53,7 +53,7 @@
             <plugin>
                 <groupId>com.gluonhq</groupId>
                 <artifactId>client-maven-plugin</artifactId>
-                <version>0.0.10</version>
+                <version>0.0.11</version>
                 <configuration>
                     <!-- Uncomment to run on iOS: -->
                     <!-- <target>ios</target>-->
