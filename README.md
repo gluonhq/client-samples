@@ -15,15 +15,17 @@ As well, for now only JDK 11 is supported. Any JDK 11 distribution that doesn't 
 
 Once downloaded and installed, don't forget to set `JAVA_HOME` pointing to that JDK.
 
+The HelloGluon sample can be run without a Gluon Mobile license, but a nag screen will show up. See [link](https://gluonhq.com/products/mobile/) for more details. 
+
 **Documentation**
 
 Check the [documentation](https://docs.gluonhq.com/client) for more details about the plugins and running the following samples.
 
 ## Gradle
 
-### HelloWorld, HelloFX, HelloFXML samples
+### HelloWorld, HelloFX, HelloFXML and HelloGluon samples
 
-The following tasks apply to Mac OS X, iOS simulator and iOS devices. See each sample for configuration details.
+The following tasks apply to Linux, Mac OS X, iOS simulator and iOS devices. See each sample for configuration details.
 
 To compile and link:
 
@@ -39,9 +41,9 @@ To run:
 
 ## Maven
 
-### HelloWorld, HelloFX, HelloFXML samples
+### HelloWorld, HelloFX, HelloFXML and HelloGluon samples
 
-The following tasks apply to Mac OS X, iOS simulator and iOS devices. See each sample for configuration details.
+The following tasks apply to Linux, Mac OS X, iOS simulator and iOS devices. See each sample for configuration details.
 
 To compile and link:
 
