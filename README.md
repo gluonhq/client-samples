@@ -15,7 +15,7 @@ As well, for now only JDK 11 is supported. Any JDK 11 distribution that doesn't 
 
 Once downloaded and installed, don't forget to set `JAVA_HOME` pointing to that JDK.
 
-The HelloGluon sample can be run without a Gluon Mobile license, but a nag screen will show up. See [link](https://gluonhq.com/products/mobile/) for more details. 
+The HelloGluon sample can be run without a Gluon Mobile license, but a nag screen will show up. See the [Gluon Mobile product page](https://gluonhq.com/products/mobile/) for more details. 
 
 **Documentation**
 
