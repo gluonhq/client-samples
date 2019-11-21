@@ -6,7 +6,7 @@ Java and JavaFX samples to run with GraalVM and the Gluon Client plugins for [Ma
 
 For now only Linux and Mac OS X are supported.
 
-* Install GraalVM 19.3.0 or later if you haven’t already. Download the appropriate Community Edition archive from [https://github.com/oracle/graal/releases](https://github.com/oracle/graal/releases), and unpack it like you would any other JDK.
+* Install the Java 11 based GraalVM 19.3.0: download the appropriate Community Edition archive from [https://github.com/oracle/graal/releases](https://github.com/oracle/graal/releases), and unpack it like you would any other JDK.
 
 * Configure the runtime environment. Set GRAALVM_HOME environment variable to the GraalVM installation directory, for example:
 
