@@ -16,6 +16,10 @@ For now only Linux and Mac OS X are supported.
 
     `export GRAALVM_HOME=/path-to-your-graalvm/Contents/Home`
 
+*  Set JAVA_HOME to point to the GraalVM installation directory, for example:
+
+    `export JAVA_HOME=$GRAALVM_HOME`
+
 * Install the native-image tool using gu install:
 
    `${GRAALVM_HOME}/bin/gu install native-image`   
@@ -35,4 +39,4 @@ To run:
 
     mvn client:run
 
-or simply run the native executable found in target/
+or simply run the native executable found in target/client
