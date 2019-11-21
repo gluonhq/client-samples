@@ -1,49 +1,35 @@
 # Gluon Client Samples
 
-Java and JavaFX samples to run with OpenJDK 11, GraalVM and the Gluon Client plugins for [Maven](https://github.com/gluonhq/client-maven-plugin/) and [Gradle](https://github.com/gluonhq/client-gradle-plugin/).
+Java and JavaFX samples to run with GraalVM and the Gluon Client plugins for [Maven](https://github.com/gluonhq/client-maven-plugin/).
 
-**Requirements**
+## Requirements
 
-For now, Linux, Mac OS X and iOS platforms are supported.
- 
-To develop and deploy native applications on Mac or iOS platforms, a Mac with macOS X 10.13.2 or superior, and Xcode 9.2 or superior, available from the Mac App Store, are required.
+For now only Linux and Mac OS X are supported.
 
-As well, for now only JDK 11 is supported. Any JDK 11 distribution that doesn't bundle JavaFX is valid, like:
+* Install GraalVM 19.3.0 or later if you haven’t already. 
+ * Download the appropriate Community Edition archive from [https://github.com/oracle/graal/releases](https://github.com/oracle/graal/releases), and unpack it like you would any other JDK.
+* Configure the runtime environment. Set GRAALVM_HOME environment variable to the GraalVM installation directory, for example:
 
-- [OpenJDK 11.0.2](https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_osx-x64_bin.tar.gz)
-- [AdoptOpenJDK 11.0.3](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.3%2B7/OpenJDK11U-jdk_x64_mac_hotspot_11.0.3_7.tar.gz) 
+    `export GRAALVM_HOME=/path-to-your-graalvm`
 
-Once downloaded and installed, don't forget to set `JAVA_HOME` pointing to that JDK.
+    On macOS, point the variable to the Home sub-directory:
 
-The HelloGluon sample can be run without a Gluon Mobile license, but a nag screen will show up. See the [Gluon Mobile product page](https://gluonhq.com/products/mobile/) for more details. 
+    `export GRAALVM_HOME=/path-to-your-graalvm/Contents/Home`
 
-**Documentation**
+* Install the native-image tool using gu install:
 
-Check the [documentation](https://docs.gluonhq.com/client) for more details about the plugins and running the following samples.
+   `${GRAALVM_HOME}/bin/gu install native-image`   
 
-## Gradle
+* Optionally also set `JAVA_HOME` pointing to your GraalVM installation.
 
-### HelloWorld, HelloFX, HelloFXML and HelloGluon samples
+    `export JAVA_HOME=$GRAALVM_HOME`
 
-The following tasks apply to Linux, Mac OS X, iOS simulator and iOS devices. See each sample for configuration details.
 
-To compile and link:
-
-    ./gradlew clean build nativeCompile nativeLink
-    
-or
-
-    ./gradlew clean nativeBuild
-
-To run:
-    
-    ./gradlew nativeRun
-
-## Maven
+## Build using Maven
 
 ### HelloWorld, HelloFX, HelloFXML and HelloGluon samples
 
-The following tasks apply to Linux, Mac OS X, iOS simulator and iOS devices. See each sample for configuration details.
+The following tasks apply to Linux and Mac OS X. See each sample for configuration details.
 
 To compile and link:
 
@@ -56,3 +42,5 @@ or
 To run:
 
     mvn client:run
+
+or simply run the native binary found in target/
