@@ -20,7 +20,7 @@ For now only Linux and Mac OS X are supported.
 
     `export JAVA_HOME=$GRAALVM_HOME`
 
-* Install the native-image tool using gu install:
+* Install the native-image tool using `gu install`:
 
    `${GRAALVM_HOME}/bin/gu install native-image`   
 
@@ -29,7 +29,7 @@ For now only Linux and Mac OS X are supported.
 
 ### HelloWorld, HelloFX, HelloFXML and HelloGluon samples
 
-The following tasks apply to Linux and Mac OS X. See each sample for configuration details.
+The following goals apply to Linux and Mac OS X. See each sample for configuration details.
 
 To build the native image:
 
@@ -40,3 +40,11 @@ To run:
     mvn client:run
 
 or simply run the native executable found in target/client
+
+## Issues and Contributions ##
+
+Issues can be reported to the [Issue tracker](https://github.com/gluonhq/client-samples/issues)
+
+Contributions can be submitted via [Pull requests](https://github.com/gluonhq/client-samples/pulls), 
+providing you have signed the [Gluon Individual Contributor License Agreement (CLA)](https://docs.google.com/forms/d/16aoFTmzs8lZTfiyrEm8YgMqMYaGQl0J8wA0VJE2LCCY).
+
