@@ -47,6 +47,14 @@ To run the generated executable:
 Before you can use the plugin for deploying to iOS devices, you need to have `llvm` in your path. You can download llvm for 
 Mac OS X <a href="http://releases.llvm.org/6.0.0/clang+llvm-6.0.0-x86_64-apple-darwin.tar.xz">here</a>.
 
+Also, you need a recent version of GraalVM, which you can download from
+
+wget https://download2.gluonhq.com/substrate/graalvm/graalvm-svm-darwin-20.0.0-ea+20.zip
+
+After unzipping that binary (e.g. in `/opt`, point `GRAALVM_HOME` towards it.
+
+`export GRAALVM_HOME=/opt/graalvm-svm-darwin-20.0.0-ea+20`
+
 The only required change in the `pom.xml` is providing the optional `target` property in the configuration inside the plugin:
 ```
 <artifactId>client-maven-plugin</artifactId>
