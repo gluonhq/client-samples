@@ -88,11 +88,15 @@ or simply run the native executable found in target/client
 </configuration>
 ```
 
-* Build the native image:
+* Build the native image
+
+Run:
 
     mvn clean client:build
 
-* Connect an iOS device and run:
+* Connect an iOS device and deploy the app:
+
+Run:
 
     mvn client:run
 
