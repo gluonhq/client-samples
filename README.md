@@ -2,9 +2,11 @@
 
 Java and JavaFX samples to run with GraalVM and the Gluon Client plugins for [Maven](https://github.com/gluonhq/client-maven-plugin/).
 
-## Requirements
+For now only Linux, Mac OS X and iOS platforms are supported. 
 
-For now only Linux and Mac OS X are supported.
+## Building and running the samples on Linux and Mac OS X
+
+### Requirements
 
 * Install the Java 11 based GraalVM 19.3.0: download the appropriate Community Edition archive from [https://github.com/oracle/graal/releases](https://github.com/graalvm/graalvm-ce-builds/releases/tag/vm-19.3.0), and unpack it like you would any other JDK.
 
@@ -25,11 +27,11 @@ For now only Linux and Mac OS X are supported.
    `${GRAALVM_HOME}/bin/gu install native-image`   
 
 
-## Build using Maven
+### Build using Maven
 
-### HelloWorld, HelloFX, HelloFXML and HelloGluon samples
+#### HelloWorld, HelloFX, HelloFXML and HelloGluon samples
 
-The following goals apply to Linux and Mac OS X. See each sample for configuration details.
+The following goals apply to Linux and Mac OS X.
 
 To build the native image:
 
@@ -40,6 +42,65 @@ To run:
     mvn client:run
 
 or simply run the native executable found in target/client
+
+
+
+## Building and running the samples on iOS
+
+### Requirements
+
+* Download this version of Graal VM: https://download2.gluonhq.com/substrate/graalvm/graalvm-svm-darwin-20.0.0-ea+20.zip and unpack it like you would any other JDK. (e.g. in `/opt`)
+
+* Configure the runtime environment. Set GRAALVM_HOME environment variable to the GraalVM installation directory, for example:
+
+    `export GRAALVM_HOME=/opt/graalvm-svm-darwin-20.0.0-ea+20`
+
+*  Set JAVA_HOME to point to the GraalVM installation directory, for example:
+
+    `export JAVA_HOME=$GRAALVM_HOME`
+
+
+* Download llvm http://releases.llvm.org/6.0.0/clang+llvm-6.0.0-x86_64-apple-darwin.tar.xz, unpack it and make sure it is found on the $PATH, for example
+
+    `EXPORT PATH=$PATH:/path-to-llvm/clang+llvm-6.0.0-x86_64-apple-darwin/bin`
+
+* Install libusbmuxd:
+
+    `brew install --HEAD libusbmuxd`
+
+* Install libimobiledevice
+
+    `brew install --HEAD libimobiledevice`
+
+
+### Build using Maven
+
+#### HelloWorld, HelloFX, HelloFXML and HelloGluon samples
+
+
+* Change the target to `ios` (for iOS devices) or `ios-sim` (for the iOS simulator) in the `pom.xml`
+
+```
+<artifactId>client-maven-plugin</artifactId>
+<configuration>
+    <target>ios</target>
+    <mainClass>${mainClassName}</mainClass>
+</configuration>
+```
+
+* Build the native image:
+
+    mvn clean client:build
+
+* Connect an iOS device and run:
+
+    mvn client:run
+
+
+**Note**: Since all java bytecode is translated to native code, the compilation step can take a long time, and it requires a fair amount of memory.
+
+**Note**: In order to deploy apps to an iOS device, you need a valid iOS provisioning profile, as explained in the [documentation](https://docs.gluonhq.com/client/#_ios_deployment).
+
 
 ## Issues and Contributions ##
 

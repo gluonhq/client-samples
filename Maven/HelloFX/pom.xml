@@ -52,7 +52,7 @@
                 <version>${client.plugin.version}</version>
                 <configuration>
                     <!-- Uncomment to run on iOS: -->
-                    <target>ios</target>
+                    <!-- <target>ios</target> -->
                     <mainClass>${mainClassName}</mainClass>
                 </configuration>
             </plugin>
