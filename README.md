@@ -10,21 +10,27 @@ For now only Linux, Mac OS X and iOS platforms are supported.
 
 * Install the Java 11 based GraalVM 19.3.0: download the appropriate Community Edition archive from [https://github.com/oracle/graal/releases](https://github.com/graalvm/graalvm-ce-builds/releases/tag/vm-19.3.0), and unpack it like you would any other JDK.
 
-* Configure the runtime environment. Set GRAALVM_HOME environment variable to the GraalVM installation directory, for example:
+* Configure the runtime environment. Set GRAALVM_HOME environment variable to the GraalVM installation directory.
 
-    `export GRAALVM_HOME=/path-to-your-graalvm`
+For example:
 
-    On macOS, point the variable to the Home sub-directory:
+    export GRAALVM_HOME=/path-to-your-graalvm
 
-    `export GRAALVM_HOME=/path-to-your-graalvm/Contents/Home`
+On macOS, point the variable to the Home sub-directory:
 
-*  Set JAVA_HOME to point to the GraalVM installation directory, for example:
+    export GRAALVM_HOME=/path-to-your-graalvm/Contents/Home
 
-    `export JAVA_HOME=$GRAALVM_HOME`
+*  Set JAVA_HOME to point to the GraalVM installation directory.
 
-* Install the native-image tool using `gu install`:
+For example:
 
-   `${GRAALVM_HOME}/bin/gu install native-image`   
+    export JAVA_HOME=$GRAALVM_HOME
+
+* Install the native-image tool.
+
+Using `gu install`:
+    
+    ${GRAALVM_HOME}/bin/gu install native-image
 
 
 ### Build using Maven
@@ -51,26 +57,40 @@ or simply run the native executable found in target/client
 
 * Download this version of Graal VM: https://download2.gluonhq.com/substrate/graalvm/graalvm-svm-darwin-20.0.0-ea+20.zip and unpack it like you would any other JDK. (e.g. in `/opt`)
 
-* Configure the runtime environment. Set GRAALVM_HOME environment variable to the GraalVM installation directory, for example:
+* Configure the runtime environment. Set `GRAALVM_HOME` environment variable to the GraalVM installation directory.
 
-    `export GRAALVM_HOME=/opt/graalvm-svm-darwin-20.0.0-ea+20`
+For example:
 
-*  Set JAVA_HOME to point to the GraalVM installation directory, for example:
-
-    `export JAVA_HOME=$GRAALVM_HOME`
+    export GRAALVM_HOME=/opt/graalvm-svm-darwin-20.0.0-ea+20
 
 
-* Download llvm http://releases.llvm.org/6.0.0/clang+llvm-6.0.0-x86_64-apple-darwin.tar.xz, unpack it and make sure it is found on the $PATH, for example
+*  Set `JAVA_HOME` to point to the GraalVM installation directory
 
-    `EXPORT PATH=$PATH:/path-to-llvm/clang+llvm-6.0.0-x86_64-apple-darwin/bin`
+For example:
 
-* Install libusbmuxd:
+    export JAVA_HOME=$GRAALVM_HOME
 
-    `brew install --HEAD libusbmuxd`
+
+* Download llvm http://releases.llvm.org/6.0.0/clang+llvm-6.0.0-x86_64-apple-darwin.tar.xz, unpack it and make sure it is found on the `$PATH`.
+
+For example:
+
+    EXPORT PATH=$PATH:/path-to-llvm/clang+llvm-6.0.0-x86_64-apple-darwin/bin
+
+* Install Homebrew if you haven't already. Please refer to https://brew.sh/ for more information.
+
+* Install libusbmuxd
+
+Using brew:
+
+    `brew install --HEAD libusbmuxd
 
 * Install libimobiledevice
 
-    `brew install --HEAD libimobiledevice`
+Using brew:
+
+    brew install --HEAD libimobiledevice
+
 
 
 ### Build using Maven
@@ -78,7 +98,7 @@ or simply run the native executable found in target/client
 #### HelloWorld, HelloFX, HelloFXML and HelloGluon samples
 
 
-* Change the target to `ios` (for iOS devices) or `ios-sim` (for the iOS simulator) in the `pom.xml`
+* Change the target to `ios` (for iOS devices) or `ios-sim` (for the iOS simulator) in the `pom.xml`:
 
 ```
 <artifactId>client-maven-plugin</artifactId>
