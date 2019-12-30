@@ -14,7 +14,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <javafx.version>13.0.1</javafx.version>
-        <attach.version>4.0.2</attach.version>
+        <attach.version>4.0.3</attach.version>
         <client.plugin.version>0.1.10</client.plugin.version>
         <mainClassName>com.gluonhq.hello.HelloGluon</mainClassName>
     </properties>
@@ -28,7 +28,7 @@
         <dependency>
             <groupId>com.gluonhq</groupId>
             <artifactId>charm-glisten</artifactId>
-            <version>6.0.1</version>
+            <version>6.0.2</version>
         </dependency>
         <dependency>
             <groupId>com.gluonhq.attach</groupId>
@@ -97,9 +97,6 @@
                         <list>statusbar</list>
                         <list>storage</list>
                     </attachList>
-                    <reflectionList>
-                        <list>com.gluonhq.impl.charm.glisten.control.skin.GlistenButtonSkin</list>
-                    </reflectionList>
                     <mainClass>${mainClassName}</mainClass>
                 </configuration>
             </plugin>
