@@ -15,7 +15,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <javafx.version>13.0.1</javafx.version>
         <attach.version>4.0.3</attach.version>
-        <client.plugin.version>0.1.11</client.plugin.version>
+        <client.plugin.version>0.1.12</client.plugin.version>
         <mainClassName>com.gluonhq.hello.HelloGluon</mainClassName>
     </properties>
 
