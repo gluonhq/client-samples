@@ -14,7 +14,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <javafx.version>13.0.1</javafx.version>
-        <client.plugin.version>0.1.13</client.plugin.version>
+        <client.plugin.version>0.1.14</client.plugin.version>
         <mainClassName>hellofx.HelloFXML</mainClassName>
     </properties>
 
