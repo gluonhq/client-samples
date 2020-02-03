@@ -61,7 +61,7 @@ or simply run the native executable found in target/client
 
 For example:
 
-    export GRAALVM_HOME=/opt/graalvm-svm-darwin-20.0.0-ea+20
+    export GRAALVM_HOME=/opt/graalvm-svm-darwin-20.0.0-ea+21
 
 
 *  Set `JAVA_HOME` to point to the GraalVM installation directory
