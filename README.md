@@ -122,8 +122,8 @@ Using brew:
 * Android can be built only on Linux OS and requires a custom [GraalVM Linux SDK](http://download2.gluonhq.com/substrate/graalvm/graalvm-svm-linux-20.0.0-ea+20.zip)
 * Set `GRAALVM_HOME` environment variable to the GraalVM installation directory
 * Set `JAVA_HOME` to point to the GraalVM installation directory
-* Download and extract [Android SDK](https://developer.android.com/studio/#command-tools) and [Android NDK](https://developer.android.com/ndk/downloads/)
-* Set `ANDROID_SDK` and `ANDROID_NDK` to these directories
+* Download and extract [Android SDK](https://developer.android.com/studio/#command-tools) and [Android NDK](https://developer.android.com/ndk/downloads/) to their respective directories
+* Set `ANDROID_SDK` and `ANDROID_NDK` environment variable to these directories
   
 The following sdk packages are required before running any client commands:
 
