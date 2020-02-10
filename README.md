@@ -2,9 +2,9 @@
 
 Java and JavaFX samples to run with GraalVM and the Gluon Client plugins for [Maven](https://github.com/gluonhq/client-maven-plugin/).
 
-For now only Linux, Mac OS X and iOS platforms are supported. 
+For now only Linux, Mac OS X, iOS and Android platforms are supported. 
 
-## Building and running the samples on Linux and Mac OS X
+## Build and run the samples on Linux and Mac OS X
 
 ### Requirements
 
@@ -43,15 +43,13 @@ To build the native image:
 
     mvn clean client:build
 
-To run:
+To run the native image:
 
     mvn client:run
 
 or simply run the native executable found in target/client
 
-
-
-## Building and running the samples on iOS
+## Build and run the samples on iOS
 
 ### Requirements
 
@@ -63,13 +61,11 @@ For example:
 
     export GRAALVM_HOME=/opt/graalvm-svm-darwin-20.0.0-ea+21
 
-
-*  Set `JAVA_HOME` to point to the GraalVM installation directory
+* Set `JAVA_HOME` to point to the GraalVM installation directory
 
 For example:
 
     export JAVA_HOME=$GRAALVM_HOME
-
 
 * Download llvm http://releases.llvm.org/6.0.0/clang+llvm-6.0.0-x86_64-apple-darwin.tar.xz, unpack it and make sure it is found on the `$PATH`.
 
@@ -91,8 +87,6 @@ Using brew:
 
     brew install --HEAD libimobiledevice
 
-
-
 ### Build using Maven
 
 #### HelloWorld, HelloFX, HelloFXML and HelloGluon samples
@@ -108,15 +102,11 @@ Using brew:
 </configuration>
 ```
 
-* Build the native image
-
-Run:
+* Build the native image:
 
     mvn clean client:build
 
 * Connect an iOS device and deploy the app:
-
-Run:
 
     mvn client:run
 
@@ -125,6 +115,46 @@ Run:
 
 **Note**: In order to deploy apps to an iOS device, you need a valid iOS provisioning profile, as explained in the [documentation](https://docs.gluonhq.com/client/#_ios_deployment).
 
+## Build and run the samples on Android
+
+### Requirements
+
+* Android can be built only on Linux OS and requires a custom [GraalVM Linux SDK](http://download2.gluonhq.com/substrate/graalvm/graalvm-svm-linux-20.0.0-ea+20.zip)
+* Set `GRAALVM_HOME` environment variable to the GraalVM installation directory
+* Set `JAVA_HOME` to point to the GraalVM installation directory
+* Download and extract [Android SDK](https://developer.android.com/studio/#command-tools) and [Android NDK](https://developer.android.com/ndk/downloads/) to their respective directories
+* Set `ANDROID_SDK` and `ANDROID_NDK` environment variable to these directories
+  
+The following sdk packages are required before running any client commands:
+
+* platforms:android-27
+* platform-tools
+* build-tools
+
+### Build using Maven
+
+#### HelloWorld, HelloFX, HelloFXML and HelloGluon samples
+
+* Change the target to `android` (for android devices) in `pom.xml`:
+
+```
+<artifactId>client-maven-plugin</artifactId>
+<configuration>
+    <target>android</target>
+    <mainClass>${mainClassName}</mainClass>
+</configuration>
+```
+
+* Build the native image:
+
+    mvn clean client:build
+
+* Connect an android device and deploy the app:
+
+    mvn client:run
+
+
+**Note**: Since all java bytecode is translated to native code, the compilation step can take a long time, and it requires a fair amount of memory.
 
 ## Issues and Contributions ##
 
