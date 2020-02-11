@@ -1,0 +1,23 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+    id 'com.gluonhq.client-gradle-plugin' version '0.0.12'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
+
+gluonClient {
+    // target = "ios" // uncomment to deploy on iOS
+}
+
+javafx {
+    version = "12.0.2"
+    modules = [ "javafx.controls" ]
+}
+
+mainClassName = 'hellofx.HelloFX'
