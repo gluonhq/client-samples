@@ -71,7 +71,7 @@ For example:
 
 For example:
 
-    EXPORT PATH=$PATH:/path-to-llvm/clang+llvm-6.0.0-x86_64-apple-darwin/bin
+    export PATH=$PATH:/path-to-llvm/clang+llvm-6.0.0-x86_64-apple-darwin/bin
 
 * Install Homebrew if you haven't already. Please refer to https://brew.sh/ for more information.
 
