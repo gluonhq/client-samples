@@ -106,7 +106,7 @@ Using brew:
 
 ```
 mvn clean client:build
-
+```
 
 * Connect an iOS device and deploy the app:
 
