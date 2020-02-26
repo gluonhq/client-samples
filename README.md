@@ -8,7 +8,7 @@ For now only Linux, Mac OS X, iOS and Android platforms are supported.
 
 ### Requirements
 
-* Install the Java 11 based GraalVM 19.3.0: download the appropriate Community Edition archive from [https://github.com/oracle/graal/releases](https://github.com/graalvm/graalvm-ce-builds/releases/tag/vm-19.3.0), and unpack it like you would any other JDK.
+* Install the Java 11 based GraalVM 20.0.0: download the appropriate Community Edition archive from [https://github.com/oracle/graal/releases](https://github.com/graalvm/graalvm-ce-builds/releases/tag/vm-20.0.0), and unpack it like you would any other JDK.
 
 * Configure the runtime environment. Set GRAALVM_HOME environment variable to the GraalVM installation directory.
 
@@ -53,13 +53,13 @@ or simply run the native executable found in target/client
 
 ### Requirements
 
-* Download this version of Graal VM: https://download2.gluonhq.com/substrate/graalvm/graalvm-svm-darwin-20.0.0-ea+21.zip and unpack it like you would any other JDK. (e.g. in `/opt`)
+* Download this version of Graal VM: https://download2.gluonhq.com/substrate/graalvm/graalvm-svm-darwin-20.1.0-ea+25.zip and unpack it like you would any other JDK. (e.g. in `/opt`)
 
 * Configure the runtime environment. Set `GRAALVM_HOME` environment variable to the GraalVM installation directory.
 
 For example:
 
-    export GRAALVM_HOME=/opt/graalvm-svm-darwin-20.0.0-ea+21
+    export GRAALVM_HOME=/opt/graalvm-svm-darwin-20.1.0-ea+25
 
 * Set `JAVA_HOME` to point to the GraalVM installation directory
 
@@ -67,23 +67,17 @@ For example:
 
     export JAVA_HOME=$GRAALVM_HOME
 
-* Download llvm http://releases.llvm.org/6.0.0/clang+llvm-6.0.0-x86_64-apple-darwin.tar.xz, unpack it and make sure it is found on the `$PATH`.
+* Install `Homebrew`, if you haven't already. Please refer to https://brew.sh/ for more information.
 
-For example:
+* Install `libusbmuxd`
 
-    export PATH=$PATH:/path-to-llvm/clang+llvm-6.0.0-x86_64-apple-darwin/bin
-
-* Install Homebrew if you haven't already. Please refer to https://brew.sh/ for more information.
-
-* Install libusbmuxd
-
-Using brew:
+Using `brew`:
 
     brew install --HEAD libusbmuxd
 
-* Install libimobiledevice
+* Install `libimobiledevice`
 
-Using brew:
+Using `brew`:
 
     brew install --HEAD libimobiledevice
 
@@ -92,7 +86,7 @@ Using brew:
 #### HelloWorld, HelloFX, HelloFXML and HelloGluon samples
 
 
-* Change the target to `ios` (for iOS devices) or `ios-sim` (for the iOS simulator) in the `pom.xml`:
+* Change the target to `ios` (for iOS devices) in the `pom.xml`:
 
 ```
 <artifactId>client-maven-plugin</artifactId>
@@ -122,7 +116,7 @@ mvn client:run
 
 ### Requirements
 
-* Android can be built only on Linux OS and requires a custom [GraalVM Linux SDK](http://download2.gluonhq.com/substrate/graalvm/graalvm-svm-linux-20.0.0-ea+20.zip)
+* Android can be built only on Linux OS and requires a custom [GraalVM Linux SDK](http://download2.gluonhq.com/substrate/graalvm/graalvm-svm-linux-20.1.0-ea+25.zip)
 * Set `GRAALVM_HOME` environment variable to the GraalVM installation directory
 * Set `JAVA_HOME` to point to the GraalVM installation directory
 * Download and extract [Android SDK](https://developer.android.com/studio/#command-tools) and [Android NDK](https://developer.android.com/ndk/downloads/) to their respective directories
