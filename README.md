@@ -79,7 +79,7 @@ For example:
 
 Using brew:
 
-    `brew install --HEAD libusbmuxd
+    brew install --HEAD libusbmuxd
 
 * Install libimobiledevice
 
@@ -104,12 +104,15 @@ Using brew:
 
 * Build the native image:
 
-    mvn clean client:build
+```
+mvn clean client:build
+```
 
 * Connect an iOS device and deploy the app:
 
-    mvn client:run
-
+```
+mvn client:run
+```
 
 **Note**: Since all java bytecode is translated to native code, the compilation step can take a long time, and it requires a fair amount of memory.
 
@@ -147,12 +150,15 @@ The following sdk packages are required before running any client commands:
 
 * Build the native image:
 
-    mvn clean client:build
+```
+mvn clean client:build
+```
 
 * Connect an android device and deploy the app:
 
-    mvn client:run
-
+```
+mvn client:run
+```
 
 **Note**: Since all java bytecode is translated to native code, the compilation step can take a long time, and it requires a fair amount of memory.
 
