@@ -166,13 +166,13 @@ mvn clean client:build
 mvn client:package
 ```
 
-* Run the installed app on the connected Android device:
+* Install the APK file on a connected Android device:
 
 ```
 mvn client:install
 ```
 
-* Connect an android device and deploy the app:
+* Run the installed app on the connected Android device:
 
 ```
 mvn client:run
