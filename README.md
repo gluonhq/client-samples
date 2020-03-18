@@ -105,13 +105,13 @@ mvn clean client:build
 * Package and create an IPA file:
 
 ```
-mvn clean client:package
+mvn client:package
 ```
 
 * Install the IPA file on a connected iOS device:
 
 ```
-mvn clean client:install
+mvn client:install
 ```
 
 * Run the installed app on the connected iOS device:
@@ -163,13 +163,13 @@ mvn clean client:build
 * Package and create an APK file:
 
 ```
-mvn clean client:package
+mvn client:package
 ```
 
 * Run the installed app on the connected Android device:
 
 ```
-mvn clean client:install
+mvn client:install
 ```
 
 * Connect an android device and deploy the app:
