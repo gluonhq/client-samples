@@ -114,7 +114,7 @@ mvn clean client:package
 mvn clean client:install
 ```
 
-* Run the installed app on the iOS device:
+* Run the installed app on the connected iOS device:
 
 ```
 mvn client:run
@@ -166,7 +166,7 @@ mvn clean client:build
 mvn clean client:package
 ```
 
-* Run the installed app on the Android device:
+* Run the installed app on the connected Android device:
 
 ```
 mvn clean client:install
