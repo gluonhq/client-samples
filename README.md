@@ -102,7 +102,19 @@ Using `brew`:
 mvn clean client:build
 ```
 
-* Connect an iOS device and deploy the app:
+* Package and create an IPA file:
+
+```
+mvn client:package
+```
+
+* Install the IPA file on a connected iOS device:
+
+```
+mvn client:install
+```
+
+* Run the installed app on the connected iOS device:
 
 ```
 mvn client:run
@@ -148,7 +160,19 @@ The following sdk packages are required before running any client commands:
 mvn clean client:build
 ```
 
-* Connect an android device and deploy the app:
+* Package and create an APK file:
+
+```
+mvn client:package
+```
+
+* Install the APK file on a connected Android device:
+
+```
+mvn client:install
+```
+
+* Run the installed app on the connected Android device:
 
 ```
 mvn client:run
