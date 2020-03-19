@@ -134,7 +134,7 @@ mvn client:run
   
 The following Android sdk packages are required before running any client commands:
 
-* platforms;android-27 (notice the use of a semicolon instead of a regular colon)
+* platforms;android-27
 * platform-tools
 * build-tools;27.0.3
 * ndk-bundle
