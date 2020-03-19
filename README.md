@@ -128,17 +128,20 @@ mvn client:run
 
 ### Requirements
 
-* Android can be built only on Linux OS and requires a custom [GraalVM Linux SDK](http://download2.gluonhq.com/substrate/graalvm/graalvm-svm-linux-20.1.0-ea+26.zip)
+* Android can be built only on Linux OS and requires a custom [GraalVM Linux SDK](https://download2.gluonhq.com/substrate/graalvm/graalvm-svm-linux-20.1.0-ea+26.zip)
 * Set `GRAALVM_HOME` environment variable to the GraalVM installation directory
 * Set `JAVA_HOME` to point to the GraalVM installation directory
-* Download and extract [Android SDK](https://developer.android.com/studio/#command-tools) and [Android NDK](https://developer.android.com/ndk/downloads/) to their respective directories
-* Set `ANDROID_SDK` and `ANDROID_NDK` environment variable to these directories
   
-The following sdk packages are required before running any client commands:
+The following Android sdk packages are required before running any client commands:
 
-* platforms:android-27
+* platforms;android-27 (notice the use of a semicolon instead of a regular colon)
 * platform-tools
-* build-tools
+* build-tools;27.0.3
+* ndk-bundle
+* extras;android;m2repository
+* extras;google;m2repository
+
+When `ANDROID_SDK` environment variable is not set, the Client plugin will download and install them, so there is no further action required. However, if it is set, make sure you have all those packages installed.
 
 ### Build using Maven
 
