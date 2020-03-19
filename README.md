@@ -53,13 +53,13 @@ or simply run the native executable found in target/client
 
 ### Requirements
 
-* Download this version of Graal VM: https://download2.gluonhq.com/substrate/graalvm/graalvm-svm-darwin-20.1.0-ea+25.zip and unpack it like you would any other JDK. (e.g. in `/opt`)
+* Download this version of Graal VM: https://download2.gluonhq.com/substrate/graalvm/graalvm-svm-darwin-20.1.0-ea+26.zip and unpack it like you would any other JDK. (e.g. in `/opt`)
 
 * Configure the runtime environment. Set `GRAALVM_HOME` environment variable to the GraalVM installation directory.
 
 For example:
 
-    export GRAALVM_HOME=/opt/graalvm-svm-darwin-20.1.0-ea+25
+    export GRAALVM_HOME=/opt/graalvm-svm-darwin-20.1.0-ea+26
 
 * Set `JAVA_HOME` to point to the GraalVM installation directory
 
@@ -128,7 +128,7 @@ mvn client:run
 
 ### Requirements
 
-* Android can be built only on Linux OS and requires a custom [GraalVM Linux SDK](http://download2.gluonhq.com/substrate/graalvm/graalvm-svm-linux-20.1.0-ea+25.zip)
+* Android can be built only on Linux OS and requires a custom [GraalVM Linux SDK](http://download2.gluonhq.com/substrate/graalvm/graalvm-svm-linux-20.1.0-ea+26.zip)
 * Set `GRAALVM_HOME` environment variable to the GraalVM installation directory
 * Set `JAVA_HOME` to point to the GraalVM installation directory
 * Download and extract [Android SDK](https://developer.android.com/studio/#command-tools) and [Android NDK](https://developer.android.com/ndk/downloads/) to their respective directories
