@@ -4,34 +4,41 @@ Java and JavaFX samples to run with GraalVM and the Gluon Client plugins for [Ma
 
 For now only Linux, Mac OS X, iOS and Android platforms are supported. 
 
-## Build and run the samples on Linux and Mac OS X
+## Build and run the samples
 
 ### Requirements
 
-* Install the Java 11 based GraalVM 20.0.0: download the appropriate Community Edition archive from [https://github.com/oracle/graal/releases](https://github.com/graalvm/graalvm-ce-builds/releases/tag/vm-20.0.0), and unpack it like you would any other JDK.
+#### Mac OS X and iOS
 
-* Configure the runtime environment. Set GRAALVM_HOME environment variable to the GraalVM installation directory.
+* Download this version of Graal VM: https://download2.gluonhq.com/substrate/graalvm/graalvm-svm-darwin-20.1.0-ea+26.zip and unpack it like you would any other JDK. (e.g. in `/opt`)
+
+* Configure the runtime environment. Set `GRAALVM_HOME` environment variable to the GraalVM installation directory.
 
 For example:
 
-    export GRAALVM_HOME=/path-to-your-graalvm
+    export GRAALVM_HOME=/opt/graalvm-svm-darwin-20.1.0-ea+26
 
-On macOS, point the variable to the Home sub-directory:
-
-    export GRAALVM_HOME=/path-to-your-graalvm/Contents/Home
-
-*  Set JAVA_HOME to point to the GraalVM installation directory.
+* Set `JAVA_HOME` to point to the GraalVM installation directory
 
 For example:
 
     export JAVA_HOME=$GRAALVM_HOME
 
-* Install the native-image tool.
+#### Linux and Android
 
-Using `gu install`:
-    
-    ${GRAALVM_HOME}/bin/gu install native-image
+* Download this version of Graal VM: https://download2.gluonhq.com/substrate/graalvm/graalvm-svm-linux-20.1.0-ea+26.zip and unpack it like you would any other JDK. (e.g. in `/opt`)
 
+* Configure the runtime environment. Set `GRAALVM_HOME` environment variable to the GraalVM installation directory.
+
+For example:
+
+    export GRAALVM_HOME=/opt/graalvm-svm-linux-20.1.0-ea+26
+
+* Set `JAVA_HOME` to point to the GraalVM installation directory
+
+For example:
+
+    export JAVA_HOME=$GRAALVM_HOME
 
 ### Build using Maven
 
@@ -47,25 +54,13 @@ To run the native image:
 
     mvn client:run
 
-or simply run the native executable found in target/client
+or simply run the native executable found in `target/client`.
 
 ## Build and run the samples on iOS
 
-### Requirements
+### Additional requirements
 
-* Download this version of Graal VM: https://download2.gluonhq.com/substrate/graalvm/graalvm-svm-darwin-20.1.0-ea+26.zip and unpack it like you would any other JDK. (e.g. in `/opt`)
-
-* Configure the runtime environment. Set `GRAALVM_HOME` environment variable to the GraalVM installation directory.
-
-For example:
-
-    export GRAALVM_HOME=/opt/graalvm-svm-darwin-20.1.0-ea+26
-
-* Set `JAVA_HOME` to point to the GraalVM installation directory
-
-For example:
-
-    export JAVA_HOME=$GRAALVM_HOME
+* iOS can be built only on Mac OS X
 
 * Install `Homebrew`, if you haven't already. Please refer to https://brew.sh/ for more information.
 
@@ -86,7 +81,7 @@ Using `brew`:
 #### HelloWorld, HelloFX, HelloFXML and HelloGluon samples
 
 
-* Change the target to `ios` (for iOS devices) in the `pom.xml`:
+* Set the target to `ios` (for iOS devices) in the `pom.xml`:
 
 ```
 <artifactId>client-maven-plugin</artifactId>
@@ -102,22 +97,16 @@ Using `brew`:
 mvn clean client:build
 ```
 
-* Package and create an IPA file:
-
-```
-mvn client:package
-```
-
-* Install the IPA file on a connected iOS device:
-
-```
-mvn client:install
-```
-
-* Run the installed app on the connected iOS device:
+* Run the app on the connected iOS device:
 
 ```
 mvn client:run
+```
+
+* Package and create an IPA file to submit to TestFlight or to the App Store:
+
+```
+mvn client:package
 ```
 
 **Note**: Since all java bytecode is translated to native code, the compilation step can take a long time, and it requires a fair amount of memory.
@@ -126,13 +115,11 @@ mvn client:run
 
 ## Build and run the samples on Android
 
-### Requirements
+### Additional requirements
 
-* Android can be built only on Linux OS and requires a custom [GraalVM Linux SDK](https://download2.gluonhq.com/substrate/graalvm/graalvm-svm-linux-20.1.0-ea+26.zip)
-* Set `GRAALVM_HOME` environment variable to the GraalVM installation directory
-* Set `JAVA_HOME` to point to the GraalVM installation directory
+* Android can be built only on Linux OS
 
-The client plugin will download the Android SDK and install the required packages. If needed, you can define the location to the Android SDK by setting the `ANDROID_SDK` environment variable, making sure that you have installed all the packages from the following list:
+The client plugin will download the Android SDK and install the required packages. Alternatively, you can define a custom location to the Android SDK by setting the `ANDROID_SDK` environment variable, making sure that you have installed all the packages from the following list:
 
 * platforms;android-27
 * platform-tools
@@ -145,7 +132,7 @@ The client plugin will download the Android SDK and install the required package
 
 #### HelloWorld, HelloFX, HelloFXML and HelloGluon samples
 
-* Change the target to `android` (for android devices) in `pom.xml`:
+* Set the target to `android` (for android devices) in `pom.xml`:
 
 ```
 <artifactId>client-maven-plugin</artifactId>
