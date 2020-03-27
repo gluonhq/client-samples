@@ -15,7 +15,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <javafx.version>13.0.1</javafx.version>
         <attach.version>4.0.5</attach.version>
-        <client.plugin.version>0.1.15</client.plugin.version>
+        <client.plugin.version>0.1.18</client.plugin.version>
         <mainClassName>com.gluonhq.hello.HelloGluon</mainClassName>
     </properties>
 
@@ -28,7 +28,7 @@
         <dependency>
             <groupId>com.gluonhq</groupId>
             <artifactId>charm-glisten</artifactId>
-            <version>6.0.2</version>
+            <version>6.0.3</version>
         </dependency>
         <dependency>
             <groupId>com.gluonhq.attach</groupId>
