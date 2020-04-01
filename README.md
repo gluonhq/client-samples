@@ -34,6 +34,11 @@ For example:
 
     export GRAALVM_HOME=/opt/graalvm-svm-linux-20.1.0-ea+26
 
+* Make sure Graal has installed the needed packages:
+
+  gu install native-image llvm-toolchain
+
+
 * Set `JAVA_HOME` to point to the GraalVM installation directory
 
 For example:
