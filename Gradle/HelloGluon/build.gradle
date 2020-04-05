@@ -13,7 +13,6 @@ repositories {
 
 dependencies {
     implementation "com.gluonhq:charm-glisten:6.0.1"
-    implementation "com.gluonhq.attach:util:4.0.5"
 }
 
 gluonClient {
