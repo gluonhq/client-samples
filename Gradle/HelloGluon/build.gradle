@@ -22,8 +22,6 @@ gluonClient {
         version = "4.0.5"
         services 'display', 'lifecycle', 'statusbar', 'storage'
     }
-
-    reflectionList = ["com.gluonhq.impl.charm.glisten.control.skin.GlistenButtonSkin"]
 }
 
 javafx {
