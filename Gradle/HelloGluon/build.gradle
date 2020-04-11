@@ -19,7 +19,7 @@ gluonClient {
 //    target = "ios"  // uncomment to deploy on iOS
 
     attachConfig {
-        version = "4.0.5"
+        version = "4.0.6"
         services 'display', 'lifecycle', 'statusbar', 'storage'
     }
 }
