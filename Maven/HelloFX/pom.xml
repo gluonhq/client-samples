@@ -13,8 +13,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <javafx.version>13.0.1</javafx.version>
-        <client.plugin.version>0.1.18</client.plugin.version>
+        <javafx.version>14</javafx.version>
+        <client.plugin.version>0.1.20</client.plugin.version>
         <mainClassName>hellofx.HelloFX</mainClassName>
     </properties>
 
@@ -40,7 +40,7 @@
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
-                <version>0.0.3</version>
+                <version>0.0.4</version>
                 <configuration>
                     <mainClass>${mainClassName}</mainClass>
                 </configuration>
