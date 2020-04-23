@@ -10,13 +10,13 @@ For now only Linux, Mac OS X, iOS and Android platforms are supported.
 
 #### Mac OS X and iOS
 
-* Download this version of Graal VM: https://download2.gluonhq.com/substrate/graalvm/graalvm-svm-darwin-20.1.0-ea+27.zip and unpack it like you would any other JDK. (e.g. in `/opt`)
+* Download this version of Graal VM: https://download2.gluonhq.com/substrate/graalvm/graalvm-svm-darwin-20.1.0-ea+28.zip and unpack it like you would any other JDK. (e.g. in `/opt`)
 
 * Configure the runtime environment. Set `GRAALVM_HOME` environment variable to the GraalVM installation directory.
 
 For example:
 
-    export GRAALVM_HOME=/opt/graalvm-svm-darwin-20.1.0-ea+27
+    export GRAALVM_HOME=/opt/graalvm-svm-darwin-20.1.0-ea+28
 
 * Set `JAVA_HOME` to point to the GraalVM installation directory
 
@@ -26,13 +26,13 @@ For example:
 
 #### Linux and Android
 
-* Download this version of Graal VM: https://download2.gluonhq.com/substrate/graalvm/graalvm-svm-linux-20.1.0-ea+27.zip and unpack it like you would any other JDK. (e.g. in `/opt`)
+* Download this version of Graal VM: https://download2.gluonhq.com/substrate/graalvm/graalvm-svm-linux-20.1.0-ea+28.zip and unpack it like you would any other JDK. (e.g. in `/opt`)
 
 * Configure the runtime environment. Set `GRAALVM_HOME` environment variable to the GraalVM installation directory.
 
 For example:
 
-    export GRAALVM_HOME=/opt/graalvm-svm-linux-20.1.0-ea+27
+    export GRAALVM_HOME=/opt/graalvm-svm-linux-20.1.0-ea+28
 
 * Set `JAVA_HOME` to point to the GraalVM installation directory
 
