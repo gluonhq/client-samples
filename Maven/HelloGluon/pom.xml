@@ -27,7 +27,7 @@
         <dependency>
             <groupId>com.gluonhq</groupId>
             <artifactId>charm-glisten</artifactId>
-            <version>6.0.4</version>
+            <version>6.0.5</version>
         </dependency>
         <dependency>
             <groupId>com.gluonhq.attach</groupId>
@@ -98,6 +98,5 @@
                 </configuration>
             </plugin>
         </plugins>
-
     </build>
 </project>
