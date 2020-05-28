@@ -11,9 +11,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <javafx.version>14</javafx.version>
+        <maven.compiler.release>11</maven.compiler.release>
+        <javafx.version>14.0.1</javafx.version>
         <client.plugin.version>0.1.26</client.plugin.version>
         <mainClassName>hellofx.HelloFXML</mainClassName>
     </properties>
@@ -37,9 +36,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
-                <configuration>
-                    <release>11</release>
-                </configuration>
             </plugin>
 
             <plugin>
@@ -56,16 +52,14 @@
                 <artifactId>client-maven-plugin</artifactId>
                 <version>${client.plugin.version}</version>
                 <configuration>
-                    <!-- Uncomment to run on iOS: -->
+                    <!-- Uncomment to run on iOS or Android: -->
                     <!-- <target>ios</target>-->
+                    <!-- <target>android</target>-->
                     <bundlesList>
                         <list>hellofx.hello</list>
                     </bundlesList>
                     <reflectionList>
-                        <list>javafx.fxml.FXMLLoader</list>
                         <list>hellofx.HelloController</list>
-                        <list>javafx.scene.control.Button</list>
-                        <list>javafx.scene.control.Label</list>
                     </reflectionList>
                     <mainClass>${mainClassName}</mainClass>
                 </configuration>
@@ -73,11 +67,4 @@
 
         </plugins>
     </build>
-    
-    <pluginRepositories>
-        <pluginRepository>
-            <id>gluon-releases</id>
-            <url>http://nexus.gluonhq.com/nexus/content/repositories/releases/</url>
-        </pluginRepository>
-    </pluginRepositories>
 </project>
