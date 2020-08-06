@@ -13,7 +13,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <client.plugin.version>0.1.29</client.plugin.version>
+        <client.plugin.version>0.1.30</client.plugin.version>
     </properties>
 
     <build>
