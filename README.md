@@ -96,7 +96,9 @@ or simply run the native executable found in `target/client`.
 
 ### Additional requirements
 
-* iOS can be built only on Mac OS X
+* iOS can be built only on Mac OS X.  
+
+* Xcode 11+ is required to build for iOS 13+. Install `Xcode` from the [Mac App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12) if you haven't already. 
 
 * Install `Homebrew`, if you haven't already. Please refer to https://brew.sh/ for more information.
 
