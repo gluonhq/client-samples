@@ -1,6 +1,6 @@
 # Gluon Client Samples
 
-Java and JavaFX samples to run with GraalVM and the Gluon Client plugins for [Maven](https://github.com/gluonhq/client-maven-plugin/).
+Java and JavaFX samples to run with GraalVM and the Gluon Client plugins for [Maven](https://github.com/gluonhq/client-maven-plugin/) and [Gradle](https://github.com/gluonhq/client-gradle-plugin).
 
 The following platforms are currently supported:
 
@@ -87,6 +87,23 @@ To run the native image:
     mvn client:run
 
 or simply run the native executable found in `target/client`.
+
+### Build using Gradle
+
+#### HelloWorld, HelloFX, HelloFXML and HelloGluon samples
+
+The following tasks apply to Linux and Mac OS X.
+
+To build the native image:
+
+    ./gradlew nativeBuild
+
+To run the native image:
+
+    ./gradlew nativeRun
+
+or simply run the native executable found in `build/client/$platform`.
+
 
 ## Build and run the samples on iOS
 
@@ -198,6 +215,44 @@ mvn client:install
 
 ```
 mvn client:run
+```
+
+**Note**: Since all java bytecode is translated to native code, the compilation step can take a long time, and it requires a fair amount of memory.
+
+### Build using Gradle
+
+#### HelloWorld, HelloFX, HelloFXML and HelloGluon samples
+
+* Set the target to `android` (for android devices) in `build.gradle`:
+
+```
+gluonClient {
+    target = "android"
+}
+```
+
+* Build the native image:
+
+```
+./gradlew nativeBuild
+```
+
+* Package and create an APK file:
+
+```
+./gradlew nativePackage
+```
+
+* Install the APK file on a connected Android device:
+
+```
+./gradlew nativeInstall
+```
+
+* Run the installed app on the connected Android device:
+
+```
+./gradlew nativeRun
 ```
 
 **Note**: Since all java bytecode is translated to native code, the compilation step can take a long time, and it requires a fair amount of memory.

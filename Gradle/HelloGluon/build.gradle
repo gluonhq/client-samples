@@ -1,0 +1,32 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+    id 'com.gluonhq.client-gradle-plugin' version '0.1.21'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://nexus.gluonhq.com/nexus/content/repositories/releases/'
+    }
+}
+
+dependencies {
+    implementation "com.gluonhq:charm-glisten:6.0.3"
+}
+
+gluonClient {
+//    target = "ios"  // uncomment to deploy on iOS
+
+    attachConfig {
+        version = "4.0.6"
+        services 'display', 'lifecycle', 'statusbar', 'storage'
+    }
+}
+
+javafx {
+    version = "14"
+    modules = [ "javafx.controls" ]
+}
+
+mainClassName = "$moduleName/com.gluonhq.hello.HelloGluon"

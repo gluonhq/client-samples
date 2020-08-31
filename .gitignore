@@ -3,6 +3,7 @@ target
 
 #Gradle
 build
+.gradle
 
 # IntelliJ IDEA
 *.iml
