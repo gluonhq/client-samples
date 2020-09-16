@@ -1,1 +1,0 @@
-Please follow the instructions here https://github.com/gluonhq/client-samples to build and run this sample.
